@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h2 id="score">Score: <span id="currentScore">0</span></h2>
+    <canvas id="tetris" width="400" height="800"></canvas>
+    <div class="container">
+
+        <div class="button">
+            <ul>
+                <li>→ This button moves the image to the right</li>
+                <li>← This button moves the image to the left</li>
+                <li>↑ This button rotates the image</li>
+                <li>↓ This button scrolls the image down</li>
+                <li>ENTER the enter button restarts the game</li>
+            </ul>
+            <button id="left">←Left</button>
+            <button id="right">→Right</button>
+            <button id="rotate">⟲Rotation</button>
+            <button id="down">↓Down</button>
+            <button id="play">Play</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+    <script src="/html_srever.js"></script>
+
+</body>
+
+</html>
