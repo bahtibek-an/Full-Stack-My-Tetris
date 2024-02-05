@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'rifat Tetris</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }   
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-around;
+            background: rgb(0,0,0);
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(237,8,8,1) 47%, rgba(0,0,0,1) 100%);
+        }
+        #name{
+            font-size: 100px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        #tetris{
+            background-color: #000;
+            box-shadow: rgba(255, 254, 254, 0.56) 0px 22px 70px 4px;
+            border: 5px solid  #00ff22;
+        }  
+    </style>
+</head>
+<body>
+    <h2 id="name">Score: 0</h2>
+    <canvas id="tetris" width="391" height="600"></canvas>
+
+
+    <script>
+        const element = document.getElementById("tetris");
+        const elementName = document.getElementById("name");
+        const kubik = element.getContext("2d");
+        kubik.scale(30,30);
+
+        let tipe = [
+            [
+                [0,1,0,0],
+                [0,1,0,0],
+                [0,1,0,0],
+                [0,1,0,0]
+            ],
+            [
+                [0,1,0],  
+                [0,1,0],  
+                [1,1,0]   
+            ],
+            [
+                [0,1,0],
+                [0,1,0],
+                [0,1,1]
+            ],
+            [
+                [1,1,0],
+                [0,1,1],
+                [0,0,0]
+            ],
+            [
+                [0,1,1],
+                [1,1,0],
+                [0,0,0]
+            ],
+            [
+                [1,1,1],
+                [0,1,0],
+                [0,0,0]
+            ],
+            [
+                [1,1],
+                [1,1],
+            ]
+        ]
+
+        const ranglar = [
+        "#000",
+            "#8A2BE2",
+            "#7FFF00",
+            "#0000FF",
+            "#DC143C",
+            "#00FFFF",
+            "#8B008B",  
+            "#FFD700",
+            "#00FF00",
+            "#000080",
+            "#FF0000"
+        ]
+
+        const qator = 20;
+        const ustun = 13;
+
+        let pikei = generatePikei();
+        let tushish = null;
+        let natija = 0;
+
+        setInterval(yangiOyin,400);
+        function yangiOyin(){
+            tekshirish();
+            if(!tushish){
+                tushish = tahmin();
+                bar();
+            }
+            pasgaHarakat();
+        }
+
+        function tekshirish(){
+            let sanoq = 0;
+            for(b=0;b<pikei.length;b++){
+                let hissiyot = true;
+                let a=0;
+                while(a<pikei[0].length){
+                    if(pikei[b][a] == 0){
+                        hissiyot = false
+                    }
+                    a++
+                }
+                if(hissiyot){
+                    sanoq++;
+                    pikei.splice(b,1);
+                    pikei.unshift([0,0,0,0,0,0,0,0,0,0]);
+                }
+            }
+            if(sanoq >= 1){
+                natija+=10;
+            }
+            elementName.innerHTML = "Score: " + natija;
+        }
+
+        function generatePikei(){
+            let pikei = [];
+            let c=0;
+            while(c<qator){
+                pikei.push([]);
+                let d=0;
+                while(d<ustun){
+                    pikei[c].push(0)
+                    d++
+                }
+                c++
+            }
+            return pikei;
+        }
+
+        function tahmin(){
+            let yurish = Math.floor(Math.random()*7);
+            let tinch = tipe[yurish];
+            let ranglarHarakati = yurish+1;
+            let x = 4;
+            let y = 0;
+            return {tinch,ranglarHarakati,x,y}
+        }
+
+        function bar(){
+            let tinch = tushish.tinch;
+            let rr=0;
+            while(rr<tinch.length){
+                let tt=0;
+                while(tt<tinch[rr].length){
+                    if(tinch[rr][tt] == 1){
+                    kubik.fillStyle = ranglar[tushish.ranglarHarakati];
+                    kubik.fillRect(tushish.x+tt,tushish.y+rr,1,1);
+                }
+                tt++
+                }
+                rr++
+            }
+        }
+
+        function pasgaHarakat(){
+            if(!toqnashuv(tushish.x,tushish.y+1))
+            tushish.y+=1;
+            else{
+                let tinch = tushish.tinch
+                let zz=0;
+                while(zz<tinch.length){
+                    let kk=0;
+                    while(kk<tinch[zz].length){
+                        if(tinch[zz][kk] == 1){
+                            let p = tushish.x+kk;
+                            let q = tushish.y+zz;
+                            pikei[q][p] = tushish.ranglarHarakati;
+                        }
+                        kk++
+                    }
+                    zz++
+                }
+                if(tushish.y == 0){
+                    alert("Yutqazdingiz! Qayta boshlaysizmi?");
+                    pikei = generatePikei();
+                    natija = 0;
+                }
+                tushish = null;
+            }
+            oyin();
+        }
+
+        function chapga(){
+            if(!toqnashuv(tushish.x-1,tushish.y))
+            tushish.x-=1;
+            oyin();
+        }
+
+        function onga(){
+            if(!toqnashuv(tushish.x+1,tushish.y))
+            tushish.x+=1;
+            oyin();
+        }
+
+        function aylanish(){
+            let aylanishArrayi = [];
+            let tinch = tushish.tinch;
+            let uy=0;
+            while(uy<tinch.length){
+                aylanishArrayi.push([]);
+                let er=0;
+                while(er<tinch[uy].length){
+                    aylanishArrayi[uy].push(0);
+                    er++
+                }
+                uy++
+            }
+            let qw=0;
+            while(qw<tinch.length){
+                let aa=0;
+                while(aa<tinch[qw].length){
+                    aylanishArrayi[qw][aa] = tinch[aa][qw]
+                    aa++
+                }
+                qw++
+            }
+
+            let ff=0;
+            while(ff<aylanishArrayi.length){
+                aylanishArrayi[ff] = aylanishArrayi[ff].reverse();
+                ff++
+            }
+            if(!toqnashuv(tushish.x,tushish.y,aylanishArrayi))
+            tushish.tinch = aylanishArrayi
+            oyin()
+        }
+
+        function toqnashuv(x,y,aylanishArrayi){
+            let tinch = aylanishArrayi || tushish.tinch
+            let uu=0;
+            while(uu<tinch.length){
+                let ee=0;
+                while(ee<tinch[uu].length){
+                    if(tinch[uu][ee] == 1){
+                    let p = x+ee;
+                    let q = y+uu;
+                    if(p>=0 && p<ustun && q>=0 && q<qator){
+                        if(pikei[q][p]>0){
+                            return true;
+                        }
+                    }else{
+                        return true;
+                    }}
+                    ee++
+                }
+                uu++
+            }
+            return false;
+        }
+
+        function oyin(){
+            let yy=0;
+            while(yy<pikei.length){
+                let pp=0;pp
+                while(pp<pikei[yy].length){
+                    kubik.fillStyle = ranglar[pikei[yy][pp]];
+                    kubik.fillRect(pp,yy,1,1)
+                    pp++
+                }
+                yy++
+            }
+            bar();
+        }
+
+        document.addEventListener("keydown",function(e){
+            let key = e.key;
+            if(key == "ArrowDown"){
+                pasgaHarakat();
+            }else if(key == "ArrowLeft"){
+                chapga();
+            }else if(key == "ArrowRight"){
+                onga();
+            }else if(key == "ArrowUp"){
+                aylanish();
+            }
+        })
+    </script> 
+</body>
+</html>
