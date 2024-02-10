@@ -1,0 +1,101 @@
+body {
+  overflow: hidden;
+  background: #c5edb5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#my_tetris{
+  width: 800px;
+  border: 10px solid black;
+  padding: 50px;
+  border-radius: 30px;
+  background: linear-gradient(45deg,rgb(49, 140, 252),rgb(239, 41, 41));
+}
+#canvas {
+  width: 400px;
+  height: 70vh;
+  background-color: rgb(16, 6, 53);
+  position: relative;
+  color: rgb(236, 16, 16);
+
+}
+#canvas h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 200px;
+}
+.piece {
+  border: 1px solid rgb(249, 249, 249);
+  position: absolute;
+}
+
+#start{
+  animation: blink .7s steps(2, start) infinite;
+  background: #1bdf09;
+  border-radius: 10px;
+  color: #202020;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+@keyframes blink {
+  to {
+    outline: #E1FF5F solid 1px;
+  }
+}
+
+.red{
+  color: #f71515;
+}
+
+.square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(255, 255, 255);
+
+}
+.type0 {
+  background-color: #a000f0;
+}
+.type1 {
+  background-color: #00f0f0;
+}
+.type2 {
+  background-color: #f0a000;
+}
+.type3 {
+  background-color: #5b5bce;
+}
+.type4 {
+  background-color: #1c5fdd;
+}
+.type5 {
+  background-color: #1de279;
+}
+.type6 {
+  background-color: #509b13e0;
+}
+#next_shape {
+  position: relative;
+  background-color: #3d3f17da;
+  border: 1px solid white;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+}
+#info {
+  background-color: rgb(16, 6, 53.0);
+  color: #fff;
+  float: right;
+  width: 300px;
+  height: 720px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
