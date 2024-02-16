@@ -25,9 +25,9 @@ Welcome to the Tetris Game! This project is a classic implementation of the famo
 
 The goal of Tetris is to clear lines by completing horizontal rows of blocks without leaving any gaps. As the game progresses, the falling pieces (tetrominoes) speed up, making it more challenging. When you complete a line, it disappears, and you earn points. The game ends when the stack of tetrominoes reaches the top of the screen.
 
-### Project Demo
+<!-- ### Project Demo
 
-![screen-gif](assets/game-image.png)
+![screen-gif](assets/game-image.png) -->
 
 ## Installation
 
