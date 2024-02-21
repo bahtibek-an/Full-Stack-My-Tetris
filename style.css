@@ -1,0 +1,117 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 320px 200px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-board {
+    border: solid 2px #ff5733; /* Change border color */
+}
+
+.play-button {
+    background-color: #4CAF50; /* Change button background color */
+    color: white;
+    font-size: 18px; /* Increase font size */
+    padding: 12px 24px; /* Adjust padding */
+    cursor: pointer;
+    border: none;
+    border-radius: 0.6rem; /* Increase border radius */
+}
+
+.play-button:hover {
+    transform: scale(1.1); /* Increase hover scale */
+}
+
+.play-button:active {
+    transform: scale(0.95); /* Decrease active scale */
+}
+
+body {
+    background-color: #f0f0f0; /* Change background color */
+}
+
+#score,
+#lines,
+#level {
+    font-size: 1.8rem; /* Increase font size */
+    font-weight: bold;
+    margin-left: 15px; /* Adjust margin */
+    color: #333; /* Change font color */
+}
+
+.tet_grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Change alignment */
+    padding: 20px; /* Increase padding */
+    margin: 0 auto;
+    max-width: 900px; /* Increase max width */
+    color: #555; /* Change font color */
+}
+
+.game_board {
+    border: 2px solid #ff5733; /* Change border color */
+}
+
+.center_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play_btn,
+.pause_btn {
+    background-color: #2196F3; /* Change button background color */
+    color: white;
+    padding: 12px 20px; /* Adjust padding */
+    border: none;
+    border-radius: 0.6rem; /* Increase border radius */
+    font-size: 1.6rem; /* Adjust font size */
+    cursor: pointer;
+}
+
+.pause_btn {
+    background-color: #FF5252; /* Change pause button color */
+}
+
+.play_btn mark,
+.play_btn b {
+    color: #000;
+}
+
+.next {
+    border: 2px solid #ff5733; /* Change border color */
+    margin-top: 30px; /* Increase margin */
+}
+
+.right_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 220px; /* Increase width */
+    margin-left: 30px; /* Increase margin */
+}
+
+.controls {
+    margin-top: 30px; /* Increase margin */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px; /* Increase margin */
+}
