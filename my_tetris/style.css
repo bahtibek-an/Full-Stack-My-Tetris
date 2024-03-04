@@ -1,0 +1,21 @@
+body {
+    background: #fff;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  canvas {
+    border: solid 2px #000;
+    height: 40vh;
+  }
+
+.controls li{
+      color: #000;
+      font-size: 18px;
+      display: flex;
+      text-transform: lowercase;
+  }
