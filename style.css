@@ -1,0 +1,139 @@
+body {
+  background-image: url('tetris.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; 
+  padding: 0; 
+}
+.container {
+  background-image: url('tetris.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+#tetris {
+  position: relative;
+  margin-top: 100px;
+  margin-left: -200px;
+  left: 50%;
+	text-align: left;
+  width: 360px;
+  height: 100%;
+  padding: 20px;
+  background: rgb(72, 55, 85);
+  border-radius: 5%;
+}
+#canvas {
+  width: 200px;
+  height: 440px;
+  background-color: #000000;
+  position: relative;
+  color: #1c2833;
+  border-radius: 5px;
+}
+#canvas h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 200px;
+  color: #1c2833;
+}
+
+#canvas h2 {
+  text-align: center;
+} 
+
+#canvas a {
+  color: #1c2833;
+  text-decoration: none;
+}
+
+#canvas a:hover {
+  color: #819cb1;
+}
+.piece {
+
+  position: absolute;
+}
+#start{
+  background: blue;
+  color: #f8f3f9;
+  font-size: 20px;
+  font-weight: 600;
+  width:100px;
+  height: 70px;
+}
+.name-box {
+	width: 134px;
+  height: 90px;
+  float: right;
+  display: column;
+  margin-top: -90px;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  backdrop-filter: blur(0px);
+}
+
+.name-box h1 {
+  color: #27062ccf; 
+  padding-top: 12px; 
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.name-box p {
+  color: #26062bc0;  
+  margin: auto;
+}
+.buttons {
+	width: 134px;
+	text-align: center;
+  height: 40px;
+  float: right;
+  margin-top: -150px;
+  padding-top: 10px;
+  backdrop-filter: blur(0px);
+}
+.square {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+
+}
+.type0 {
+  background-color: #A020F0;
+}
+.type1 {
+  background-color: #00FFFF;
+}
+.type2 {
+  background-color: #0000FF;
+}
+.type3 {
+  background-color: #FFA500;
+}
+.type4 {
+  background-color: #008000;
+}
+.type5 {
+  background-color: #FF0000;
+}
+.type6 {
+  background-color: #FFFF00;
+}
+#next_shape {
+	position: relative; 
+  width: 115px;
+  height: 110px;
+	justify-content: center;
+}
+#info {
+	position: relative;
+  color: #ffffff;
+  float: right;
+  width: 115px;
+  height: 260px;
+  padding: 10px;
+}
