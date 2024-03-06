@@ -2,18 +2,26 @@
 ***My TETRIS***
 
 ## Task
-The task is to create a Tetris game following the provided project documentation.
+The task is to create a Tetris game.
 
 ## Description
-This project aims to develop a Tetris game using JavaScript. The game should adhere to the specifications outlined in the project documentation, including game mechanics, controls, and visual elements.
+This project aims to develop a Tetris game using JavaScript. The game should follow to the specifications outlined in the project documentation, including game mechanics and controls.
 
 ## Installation
-Clone the repository from GitHub: git clone https://github.com/your/repository.git
-Navigate to the project directory: cd tetris-game
+Clone the repository from GitHub: 
+```
+git clone https://github.com/your/repository.git
+```
+
+Navigate to the project directory: 
+```
+cd tetris-game
+```
+
 Open the index.html file in your web browser to play the game.
 
 ## Usage
-Once the game is installed and running, use the arrow keys on your keyboard to control the falling tetrominoes. Follow the Tetris game rules and try to complete lines to score points. Enjoy playing!
+Once the game is installed and running, use the arrow keys on your keyboard to control the falling block. Try to complete lines to score points. Enjoy playing!
 
 ### The Core Team
 Sayfiddin Jamoliddinov
