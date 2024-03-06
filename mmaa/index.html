@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir"ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"></link>
+        <title>Basic Tetris</title>
+    </head>
+    <body>  
+        <div class="score_box">
+            <button id="startButton">Start</button>
+        <div id="score" class="score"></div>
+        </div>  
+        
+        <div class="controls">
+            <ul class="controls-ul">
+                <li><i class="fa-solid fa-up-long">    </i>rotate</li>
+                <li>  <i class="fa-solid fa-arrow-right-long"></i>Left</li>
+                <li><i class="fa-solid fa-arrow-left-long"></i>Right</li>
+                <li><i class="fa-solid fa-arrow-down"></i>Up</li>
+                <li>Spacebar - Force Down</li>
+                <li><i class="fa-solid fa-p"></i> :pause</li>
+            </ul>
+        </div>
+        <canvas id="tetris" width="240" height="400" />
+    </body>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/8bc8f5ebf1.js" crossorigin="anonymous"></script>
+</html>
