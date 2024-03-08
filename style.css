@@ -1,0 +1,40 @@
+  body {
+    padding: 40px;
+    background: #fff;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    /* gap: 30px; */
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content:start;
+      }
+      canvas {
+        border: solid 2px #000;
+        height: 40vh;
+      }
+
+    .controls-ul li{
+          color: #000;
+          font-size: 18px;
+          display: flex;
+          text-transform: lowercase;
+          gap: 15px;
+      }
+      .controls ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .score{
+        font-size: 20px;
+      }
+      .score_box{
+        color: #fff;
+        padding: 20px;
+        background-color: gray;
+      }
