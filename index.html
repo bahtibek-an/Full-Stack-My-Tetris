@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tetris</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="center">
+          <div class="left-column">
+            <h2>Controles</h2>
+            <ol>Play / Pause P </ol>
+            <ol>Up <i class="fa-solid fa-up-long"></i></ol>
+            <ol>Down <i class="fa-solid fa-down-long"></i></ol>
+            <ol>Left <i class="fa-solid fa-left-long"></i></ol>
+            <ol>Right <i class="fa-solid fa-right-long"></i></ol>
+            <ol>Rotate <i class="fa-solid fa-rotate-right"></i></ol>
+        </div>
+    <div class="grid">
+        <canvas id="board" class="game-board"></canvas>
+        <div class="right-column">
+            <div>
+                <h1>Tetris</h1>
+                <p>Score: <span id="score">0</span></p>
+                <p>Lines: <span id="lines">0</span></p>
+                <p>Level: <span id="level">0</span></p>
+                <canvas id="next" class="next"></canvas>
+            </div>
+            <button onclick="play()" class="play-button">Play</button>
+        </div>
+    </div>
+    </div>
+  
+    
+    <script src="js/const.js"></script>
+    <script src="js/piece.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
