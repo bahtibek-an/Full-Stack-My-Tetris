@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100svh;
+  background: url(/realistic-tetris-high-detail_YTEq9.png);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+* body .grid {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(20, auto);
+  padding: 0.6vh;
+  gap: 0.3vh;
+  border-radius: 0.6vh;
+  background-color: rgba(1, 8, 89, 0.5);
+}
+* body .grid div {
+  --cell-size: min(4.5vh, 7.5vw);
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border-radius: 0.3vh;
+  background-color: rgba(126, 150, 221, 0.2);
+}
+* body .grid .ghost {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+* body .grid .I {
+  background-color: #6be1ec;
+}
+* body .grid .J {
+  background-color: #5eb0f3;
+}
+* body .grid .L {
+  background-color: #f2c35b;
+}
+* body .grid .O {
+  background-color: #f7e562;
+}
+* body .grid .S {
+  background-color: #7be17b;
+}
+* body .grid .Z {
+  background-color: #de5c6b;
+}
+* body .grid .T {
+  background-color: #b276f3;
+}
+* body .grid .I,
+* body .grid .J,
+* body .grid .L,
+* body .grid .O,
+* body .grid .S,
+* body .grid .T,
+* body .grid .Z,
+* body .grid .ghost,
+* body .grid .sad {
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px 2px rgba(1, 8, 89, 0.2);
+}
+* body .grid .sad {
+  background-color: #f2c35b;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+* body .grid .hide {
+  animation: hide 0.5s;
+}
+@keyframes hide {
+  0% {
+    transform: scale(0.8) rotate(30deg);
+  }
+  45% {
+    transform: scale(0.8) rotate(-30deg);
+  }
+  90% {
+    transform: scale(1) rotate(0);
+  }
+}
+* body .joystick {
+  width: 200px;
+  height: 500px;
+  background-color: rgba(5, 46, 54, 0.9);
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+* body .joystick .Pause {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: rgba(5, 46, 54, 0.9);
+}
+* body .joystick .Play {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: rgba(5, 46, 54, 0.9);
+}
+* body .joystick .Restart {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: rgba(5, 46, 54, 0.9);
+}
+* body #score {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
