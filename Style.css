@@ -1,0 +1,14 @@
+body{  
+    background-image: url(https://gifdb.com/images/high/black-background-star-constellation-9yh7ozd1p01cctby.gif);
+    color: #fff;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;  
+    font-size: 2em;  
+    text-align: center;  
+  }  
+  canvas{  
+    border:solid 0.2em #fff;  
+    height:90vh;  
+    margin-left: -900px;
+}  
