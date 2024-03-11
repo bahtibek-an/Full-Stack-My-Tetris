@@ -1,0 +1,50 @@
+body {
+    background-image: url('https://knowhow.pp.ua/wp-content/uploads/2019/11/tetris-lingo-feature_feature.jpg');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+canvas {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+#score{
+    color: white;
+    margin-left: 600px;
+}
+.box1{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+button{
+    width: 100px;
+    height: 50px;
+    
+    
+}
+h1{
+    transform: translateY(-70px);
+    margin-left: -100px;
+}
+.box1  a{
+      /* display: flex; */
+    text-decoration: none;
+
+}
+.box3 {
+    display: none; /* Boshlang'ich holatda yashirilgan */
+}
