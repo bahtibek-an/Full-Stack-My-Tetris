@@ -1,18 +1,20 @@
-# description
-*arenaSweep: Finds empty rows and deletes the row. Allows the player to score points for all cleared lines.
-*collide: Checks for a collision between the playing field and the player's position.
-*createMatrix: Creates an empty matrix of the given size.
-*createPiece: Returns a tetrimino (game piece) matrix of the given type.
-*drawMatrix: Draws a matrix on the screen.
-*draw: Refreshes the game screen.
-*merge: Merges the player's windowed tetrimino matrix into the main field.
-*rotate: Rotates the matrix in the specified direction.
-*playerDrop: Tetrimino will bring itself down and check, in position to add it to the main field if a ten lands.
-*playerMove: Moves the player's tetrimino left or right and checks and updates it if true.
-*playerReset: Function to reset the state of the player. Creates a new tetrimino, and when ten falls, the game is over.
-*playerRotate: Rotates and checks the Tetrimino in the specified direction, updating it if correct.
-*restartGame: Function to restart the game.
-*update: Performs a game update and creates an animation.
-*updateScore: Updates the score section.
-# task
-*this code is a tetris month, if 4 of the tetris you have placed are left in a row, we will cut the soups and give us a score in the place called score
+# Welcome to My Tetris Game
+
+# Task
+*Your task is to play Tetris, a classic tile-matching puzzle game, and achieve the highest score possible by clearing rows of blocks.
+# Description
+*This Tetris game is implemented using JavaScript and HTML5 Canvas. It features a simple but addictive gameplay where you control the falling tetrominoes (shapes made up of four square blocks) to create complete rows without any gaps. When a row is complete, it clears, and you earn points. The game ends when the blocks reach the top of the play area.
+# Installation
+*To install and play the game locally, follow these steps:
+
+*Download or clone the repository containing the game files.
+*Open the index.html file in a web browser that supports HTML5 Canvas.
+# Usage
+*Use the left and right arrow keys to move the falling tetromino sideways.
+*Use the down arrow key to accelerate the tetromino's descent.
+*Use the "Q" key to rotate the tetromino counterclockwise.
+*Use the "W" key to rotate the tetromino clockwise.
+*Clear rows by filling them completely with blocks to score points.
+*The game ends when the blocks stack up to the top of the play area.
+*After the game ends, press any key to restart.
+*Enjoy playing Tetris and aim for the highest score!
