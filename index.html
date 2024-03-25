@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Tetris</title>
+      <link rel="icon" type="image/png" href="images/icon.png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="dead_menu">
+      <div class="con">
+        <p class="special_container">
+          Game Over
+        </p>
+        <div class="special_container">
+          Your Score: <div class="Score">0</div>
+        </div>
+        <input type="button" class="btn-grad" value="Restart" onclick="restart_the_game()">
+      </div>
+    </div>
+    <div id="pause_menu">
+      <div class="con">
+        <p class="special_container">
+          Pause
+        </p>
+        <br>
+        <div>
+          <div class="special_container">
+          Your Score: <div class="Score">0</div>
+        </div>
+        <div class="special_container row">
+            <label class="volume" onclick="toggle_play()">
+              <input type="checkbox">
+              <svg viewBox="0 0 108 96">
+                <path d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z"></path>
+                <path d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3"></path>
+                <path d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33"></path>
+              </svg>
+            </label>
+          </div>
+        </div>
+        <br>
+        <input type="button" class="btn-grad" value="Continue" onclick="toggle_the_pause()">
+        <input type="button" class="btn-grad" value="Restart" onclick="restart_the_game()">
+      </div>
+    </div>
+    <div id="boss">
+      <p class="meeting_text">
+        Welcome To My Tetris Game
+      </p>
+      <div class="container">
+        <canvas id="tetris" width="300" height="550"></canvas>
+        <div class="main_container">
+          <div class="special_container">
+            press the button to start the game
+            <input class="btn-grad" type="button" value="Start" onclick="run_the_game()">
+          </div>
+          <div class="second_container">
+            <div class="special_container">
+            <label class="volume" onclick="toggle_play()">
+              <input type="checkbox">
+              <svg viewBox="0 0 108 96">
+                <path d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z"></path>
+                <path d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3"></path>
+                <path d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33"></path>
+              </svg>
+            </label>
+          </div>
+          <div class="special_container">
+            Your Score:<div class="Score">0</div>
+          </div>
+          </div>
+          <div class="special_container">
+            <p>
+              Instruction
+            </p>
+            <br>
+              <p>
+                <span class="btn material-symbols-outlined">
+                  keyboard_arrow_up
+                </span>
+                to rotate the figure
+              </p>
+              <p>
+                <span class="btn material-symbols-outlined">
+                  keyboard_arrow_left
+                </span>
+                to move the figure left
+              </p>
+              <p>
+                <span class="btn material-symbols-outlined">
+                  keyboard_arrow_right
+                </span>
+                to move the figure right
+              </p>
+              <p>
+                <span class="btn material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+                to move the figure down
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="mp3" loop="true" hidden>
+        <source src = "sounds/tetris_soundtrack.mp3"  type="audio/mp3">
+    </audio>
+    <script src="js/index.js"></script>
+</body>
+</html>
