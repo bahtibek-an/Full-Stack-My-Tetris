@@ -1,0 +1,36 @@
+* {
+  font-family: "Press Start 2P", cursive;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+  grid-template-columns: 335px 342px 185px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-board {
+  border: solid 2px;
+}
+
+.play-button {
+  background-color: #4caf50;
+  font-size: 16px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+#pause-btn {
+  background-color: red;
+}
+
+#hard-drop-btn {
+  background-color: yellow;
+  white-space: nowrap;
+}

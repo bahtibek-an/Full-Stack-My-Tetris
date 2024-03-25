@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Tetris</title>
+    <link rel="stylesheet" href="./fonts/main.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/ico" href="./img/favicon.ico"/>
+  </head>
+  <body>
+    <div class="grid">
+      <div>
+        <h3>Game controls</h3>
+        <p><kbd><span>&#x2192;</span></kbd> Move right</p>
+        <p><kbd><span>&#x2190;</span></kbd> Move left</p>
+        <p><kbd><span>&#x2191;</span></kbd> Rotate right</p>
+        <p><kbd><span>&#x2193;</span></kbd> soft drop</p>
+        <p><kbd>SPACE</kbd> Hard drop</p>
+        <p><kbd>P</kbd> Pause</p>
+      </div>
+      <canvas id="board" class="game-board"></canvas>
+      <div class="right-column">
+        <div>
+          <h1>TETRIS</h1>
+          <p>Score: <span id="score">0</span></p>
+          <p>Lines: <span id="lines">0</span></p>
+          <p>Level: <span id="level">0</span></p>
+          <canvas id="next" class="next"></canvas>
+        </div>
+        <button id="play-btn" onclick="play()" class="play-button">Play</button>
+        <button id="pause-btn" onclick="pause()" class="play-button">Pause</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="piece.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
